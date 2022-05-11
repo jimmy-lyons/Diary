@@ -4,8 +4,8 @@ class Diary
     @entries = []
   end
 
-  def add(entry)
-    @entries << entry
+  def add(title, body)
+    @entries << {title => body}
   end
 
   def entries

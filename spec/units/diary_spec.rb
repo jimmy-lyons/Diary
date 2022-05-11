@@ -10,8 +10,12 @@ describe Diary do
   end
 
   describe 'add' do
+    it 'takes two arguments: title and body' do
+      expect(diary).to respond_to(:add).with(2).arguments
+    end
+    
     it 'stores diary entries' do
-      diary.add('foo')
+      diary.add('title', 'body')
       expect(diary.entries).not_to be nil
     end
   end
